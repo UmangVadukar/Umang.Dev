@@ -158,7 +158,7 @@
       padding: 32px 22px 24px;
       border: 3px solid #111;
       border-radius: 14px;
-      background: #fffef5;
+      background: var(--surface);
       box-shadow: 6px 6px 0px #111;
       transition: transform 0.25s cubic-bezier(.34, 1.56, .64, 1), box-shadow 0.25s;
     }
@@ -239,7 +239,6 @@
       font-size: 17px;
       font-weight: 600;
       text-align: center;
-      color: #111;
       letter-spacing: 0;
     }
 
@@ -661,15 +660,6 @@
       border-color: var(--border-hover)
     }
 
-    .tl-year {
-      font-size: 10px;
-      color: var(--muted);
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
     .tl-card h4 {
       font-family: 'Poppins', sans-serif;
       font-size: 14px;
@@ -702,6 +692,33 @@
       border: 1px solid var(--border);
       color: var(--muted);
       text-transform: uppercase;
+    }
+
+    /* Active */
+    .tl-badge.active {
+      background: rgba(245, 158, 11, 0.12);
+      color: #f59e0b;
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    /* Completed */
+    .tl-badge.completed {
+      background: rgba(34, 197, 94, 0.12);
+      color: #22c55e;
+      border-color: rgba(34, 197, 94, 0.3);
+    }
+
+    /* Dark Mode */
+    [data-theme="dark"] .tl-badge.active {
+      background: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+      border-color: rgba(251, 191, 36, 0.35);
+    }
+
+    [data-theme="dark"] .tl-badge.completed {
+      background: rgba(74, 222, 128, 0.15);
+      color: #4ade80;
+      border-color: rgba(74, 222, 128, 0.35);
     }
 
     /* ─── RESUME ACTIONS ─── */
@@ -1264,53 +1281,58 @@
           <div class="tl-item">
             <div class="tl-dot"></div>
             <div class="tl-card">
-              <div class="tl-year">In Progress</div>
-              <h4>B.Tech — Computer Science</h4>
-              <div class="tl-inst">Pursuing · Rajkot, India</div>
-              <div class="tl-detail">Building expertise in algorithms, systems, and full stack development.</div>
-              <span class="tl-badge">Active</span>
+              <h4>B.E — Computer Science</h4>
+              <div class="tl-inst">Pursuing · The Maharaja Sayajirao University of Baroda</div>
+              <div class="tl-detail">CGPA: 8.2</div>
+              <span class="tl-badge" style=" background: rgba(197, 197, 34, 0.15);
+  color: #bac522;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font: 0.8rem;
+  font-weight: 500;"">Active</span>
             </div>
           </div>
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-year">Completed</div>
-              <h4>Higher Secondary (12th)</h4>
-              <div class="tl-inst">Science Stream · Gujarat Board</div>
-              <div class="tl-detail">Foundation in Mathematics, Physics & Computer Science.</div>
-              <span class="tl-badge">Completed</span>
+          <div class=" tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                  <h4>Diploma in Computer Engineering</h4>
+                  <div class="tl-inst">A.V Parekh Technical Institute, Rajkot · Gujarat Technological University</div>
+                  <div class="tl-detail">CGPA: 9.58</div>
+                  <span class="tl-badge completed">Completed</span>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CONTACT -->
-      <div class="about-block" id="contact">
-        <div class="sec-header">
-          <h2>Get In <span>Touch</span></h2>
-          <div class="sec-rule">
-            <div class="sec-rule-line"></div>
-            <div class="sec-rule-dot"></div>
-          </div>
-        </div>
-        <div class="about-cta">
-          <div>
-            <h3>Let's build something together</h3>
-            <p>Open to internships, collaborations, and interesting projects. Drop a message — I usually reply within 24
-              hours.</p>
-          </div>
-          <div class="cta-btns">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=umangvadukar2005@gmail.com" target="_blank"
-              class="res-btn res-btn-primary">
-              Email Me
-            </a>
-        
-            <a href="https://www.linkedin.com/in/umang-vadukar-34b056373/" class="res-btn res-btn-ghost" target="_blank"
-              rel="noopener">LinkedIn</a>
           </div>
         </div>
 
-      </div>
+        <!-- CONTACT -->
+        <div class="about-block" id="contact">
+          <div class="sec-header">
+            <h2>Get In <span>Touch</span></h2>
+            <div class="sec-rule">
+              <div class="sec-rule-line"></div>
+              <div class="sec-rule-dot"></div>
+            </div>
+          </div>
+          <div class="about-cta">
+            <div>
+              <h3>Let's build something together</h3>
+              <p>Open to internships, collaborations, and interesting projects. Drop a message — I usually reply within
+                24
+                hours.</p>
+            </div>
+            <div class="cta-btns">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=umangvadukar2005@gmail.com" target="_blank"
+                class="res-btn res-btn-primary">
+                Email Me
+              </a>
+
+              <a href="https://www.linkedin.com/in/umang-vadukar-34b056373/" class="res-btn res-btn-ghost"
+                target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+
+        </div>
 
     </section>
   </main>
